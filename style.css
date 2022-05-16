@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(83, 81, 81);
+    user-select: none;
+}
+
+.wrapper {
+    padding: 0 40px;
+}
+.container {
+    max-width: 50rem;
+    height: 550px;
+    margin: 40px auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    position: relative;
+    scroll-behavior: smooth;
+    width: 400%;
+}
+.mem__img {
+    height: 450px;
+    width: 25%;
+    background-image: url(/Flying-Machine.png);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+
+
+.controls {
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+.container__for__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+.container__for__btns:hover {
+    cursor: pointer;
+}
+.container__for__btns:hover .ctrl__btn {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    transition: .3s;
+}
+.ctrl__btn {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(146, 146, 220);
+    background-color: rgb(146, 146, 220);
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+.ctrl__btn:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border-color: white;
+    transition: .3s;
+}
+
+input {
+    display: none;
+}
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+}
+.label:hover {
+    cursor: pointer;
+}
+.label:hover .ctrl__btn{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    transition: .3s;
+}
+
+
+#btn1:checked ~ .slider {
+    right: 0px;
+    transition: .5s;
+}
+#btn2:checked ~ .slider {
+    right: 800px;
+    transition: .5s;
+}
+#btn3:checked ~ .slider {
+    right: 1600px;
+    transition: .5s;
+}
+#btn4:checked ~ .slider {
+    right: 2400px;
+    transition: .5s;
+}
+
+#btn1:checked ~ .controls .label .ctrl__btn1 {
+    background-color: rgb(83, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}
+#btn2:checked ~ .controls .label .ctrl__btn2 {
+    background-color: rgb(83, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}
+#btn3:checked ~.controls .label .ctrl__btn3 {
+    background-color: rgb(83, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}
+#btn4:checked ~ .controls .label .ctrl__btn4 {
+    background-color: rgb(83, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+
+
+
+
