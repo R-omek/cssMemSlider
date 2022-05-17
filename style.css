@@ -19,6 +19,7 @@ body {
     position: relative;
     scroll-behavior: smooth;
     width: 400%;
+    column-gap: 2rem;
 }
 .mem__img {
     height: 450px;
