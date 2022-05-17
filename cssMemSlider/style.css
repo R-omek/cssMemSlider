@@ -8,7 +8,7 @@ body {
 }
 .container {
     max-width: 50rem;
-    height: 550px;
+    height: 600px;
     margin: 40px auto 20px auto;
     display: flex;
     flex-direction: column;
@@ -119,15 +119,19 @@ input {
 
 #btn1:checked ~ .controls .title1 {
     display: flex;
+    animation: animation-for-text .2s;
 }
 #btn2:checked ~ .controls .title2 {
     display: flex;
+    animation: animation-for-text .2s;
 }
 #btn3:checked ~ .controls .title3 {
     display: flex;
+    animation: animation-for-text .2s;
 }
 #btn4:checked ~ .controls .title4 {
     display: flex;
+    animation: animation-for-text .2s;
 }
 
 
@@ -149,7 +153,17 @@ input {
 }
 
 .title {
+    position: relative;
     margin-right: auto;
+}
+
+@keyframes animation-for-text {
+    from {
+        left: 200px;
+    }
+    to {
+        left: 0;
+    }
 }
 
 
