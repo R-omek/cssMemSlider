@@ -179,7 +179,7 @@ input {
 
 @media screen and (max-width: 538px) {
     .controls{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 
