@@ -1,0 +1,190 @@
+body {
+    background-color: rgb(83, 81, 81);
+    user-select: none;
+}
+
+.wrapper {
+    padding: 0 40px;
+}
+.container {
+    max-width: 50rem;
+    height: 600px;
+    margin: 40px auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    position: relative;
+    scroll-behavior: smooth;
+    width: 400%;
+    column-gap: 2rem;
+}
+.mem__img {
+    height: 25rem;
+    width: 25%;
+    /* background-image: url(Flying-Machine.png); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    /* border-radius: 4rem; */
+    /* margin-bottom: 1rem; */
+}
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 4rem;
+}
+
+
+.controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.container__for__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+.container__for__btns:hover {
+    cursor: pointer;
+}
+.container__for__btns:hover .ctrl__btn {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    transition: .3s;
+}
+.ctrl__btn {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(146, 146, 220);
+    background-color: rgb(146, 146, 220);
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+.ctrl__btn:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border-color: white;
+    transition: .3s;
+}
+
+input {
+    display: none;
+}
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+}
+.label:hover {
+    cursor: pointer;
+}
+.label:hover .ctrl__btn{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    transition: .3s;
+}
+
+
+#btn1:checked ~ .slider {
+    right: 0px;
+    transition: .5s;
+}
+#btn2:checked ~ .slider {
+    right: 100%;
+    transition: .5s;
+}
+#btn3:checked ~ .slider {
+    right: 200%;
+    transition: .5s;
+}
+#btn4:checked ~ .slider {
+    right: 300%;
+    transition: .5s;
+}
+#btn1:checked ~ .controls .title2, .title3, .title4 {
+    display: none;
+}
+#btn2:checked ~ .controls .title1, .title3, .title4 {
+    display: none;
+}
+#btn3:checked ~ .controls .title1, .title2, .title3 {
+    display: none;
+}
+#btn4:checked ~ .controls .title1, .title2, .title3 {
+    display: none;
+}
+
+#btn1:checked ~ .controls .title1 {
+    display: flex;
+    animation: animation-for-text .2s;
+}
+#btn2:checked ~ .controls .title2 {
+    display: flex;
+    animation: animation-for-text .2s;
+}
+#btn3:checked ~ .controls .title3 {
+    display: flex;
+    animation: animation-for-text .2s;
+}
+#btn4:checked ~ .controls .title4 {
+    display: flex;
+    animation: animation-for-text .2s;
+}
+
+
+#btn1:checked ~ .controls .label .ctrl__btn1 {
+    background-color: rgb(83, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}
+#btn2:checked ~ .controls .label .ctrl__btn2 {
+    background-color: rgb(83, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}
+#btn3:checked ~.controls .label .ctrl__btn3 {
+    background-color: rgb(83, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}
+#btn4:checked ~ .controls .label .ctrl__btn4 {
+    background-color: rgb(83, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.title {
+    position: relative;
+    margin-right: auto;
+}
+
+@keyframes animation-for-text {
+    from {
+        left: 200px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.btns {
+    display: flex;
+}
+
+@media screen and (max-width: 538px) {
+    .controls{
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+
+
+
